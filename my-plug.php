@@ -14,3 +14,12 @@
  * Text Domain:       my-basics-plugin
  * Domain Path:       /languages
  */
+
+
+
+add_filter('woocommerce_checkout_fields', function($fields){
+
+    unset($fields['billing']['billing_address_2']);
+
+    return $fields;
+});
